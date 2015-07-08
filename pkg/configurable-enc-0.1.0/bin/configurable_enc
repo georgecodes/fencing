@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'encrunner'
-require 'enc/enc'
-require 'enc/config'
-require 'enc/facter_adapter'

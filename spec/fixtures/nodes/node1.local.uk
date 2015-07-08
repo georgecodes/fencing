@@ -194,18 +194,6 @@
       operatingsystemmajrelease: "2015"
       system_uptime: "{\x22seconds\x22=>9693, \x22hours\x22=>2, \x22days\x22=>0, \x22uptime\x22=>\x222:41 hours\x22}"
       netmask: "255.255.255.0"
-      sshdsakey: "AAAAB3NzaC1kc3MAAACBAIIcmZc+50JBWVFnaq2gGdzYzyjuntoykVmKNqX6bf32p9SLOSKXKoUblDZ9Zwnfj+MGkjRCE7no1FVjD0h+12cIoN+GYnIyVopW4mqJJDtx1ClClkjpjYkRlto2gzQEs1oPE++txAIG8QGNKR723YBI+84TwqOR1vFRUNzeNDytAAAAFQDYMY/PZ0eM5C0vy6Eofbyl5kPOQwAAAIAElYPRvcV4D+Atq+AZN8mrMVAovregRn4LO80K3kK8p2u+fECZlgzDnicuZZUdgyOaK81PVeMw031at/rF/CTsHVoSjZpMyBpsvaLipYr5FoNNEQ/+qOtYUGZlYRB1vNUg3DXBjElMUlYXIiievPt1nAi71svUN5M/KyVSDjsOlQAAAIBV7sT7hBZrOKewcfx74Cmb7H2TB82QkIS8+/L1gAtRIZrt+ZERtuV/19vSZEyb2iZGoASyYcEln8Y4nYNsiEvOqDFKQMhXxhOEeq9Y7gfc6Q10MGzoeq92AZiKzS56h0XCcffaHgPEGKF/n5iIM+4/HUhd9NC1FeBf05XYJ8Y3ew=="
-      sshfp_dsa: |-
-        SSHFP 2 1 411d185f20a52fac9a445bd345b5daba6d35b754
-        SSHFP 2 2 6c04acb57142af1d97ee0c4b4c21bc49daafa69093626a9692ee722f9e8ca04c
-      sshrsakey: "AAAAB3NzaC1yc2EAAAADAQABAAABAQDLPnpOZX5tHgEbECiAfH3qx/zK2p1QBdVFSYVJSJ5MaoAZNFgP/+Smy2ynlly14ZZUcXS/ulLajlSxzqeB+wyKw2i6MJoRetdW4mBc4F3z9d0mWbnSJjZNHNJSZkdB/xFvBijguU3ZMbRse8s6EwjPDYnhZU4/2VX/eUtKdEwaC8MEpumPKyUv388/cQoTYoUbYVXaVvWCuGobMIwDZLia2Qj06l8HumTgKFak3MR9v1LrPGWZdsPzlb/oeLbpW69kShRnJrfpMrk8zQP+kLNLyEslDwM0c6g85JZldZSOV5e//CoLD+ebr7tyN0HxzsJL0lVnORSV5qCaoT84FzOp"
-      sshfp_rsa: |-
-        SSHFP 1 1 1841bc4838419cb780ffedd51d283543a2e1b3f1
-        SSHFP 1 2 31a2a1a6313855b40c9c0a9c9ff3ec3d7d49b8f697e658f2674019ee816f1ac0
-      sshecdsakey: "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGRF+Or1jFrCu/BFPKx018pqsGxpEmBQLYMs7krJnklC4ALVM3LCfms+By5Mx1JKez1KbBr8qvGrv8TM8Tow6go="
-      sshfp_ecdsa: |-
-        SSHFP 3 1 a90535354b0376a12535ae8054b03fff9604311d
-        SSHFP 3 2 045ce9308a493a4d03943f10b9c7fcf3966176d5fed68108c67a6f06953df09f
       facterversion: "2.2.0"
       memorysize: "996.28 MB"
       memoryfree: "625.76 MB"

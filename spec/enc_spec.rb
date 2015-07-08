@@ -1,6 +1,5 @@
 require 'rspec'
-require_relative '../lib/config'
-require_relative '../lib/enc'
+require 'spec_helper'
 
 RSpec.describe 'configured ENC' do
 

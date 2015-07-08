@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../lib/facter_adapter'
+require 'spec_helper'
 
 RSpec.describe "Facter" do
 

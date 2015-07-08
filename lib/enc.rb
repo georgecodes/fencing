@@ -19,7 +19,7 @@ module OS
     			allowed_host = blocker.blocking_host_name
     			return if host_name.start_with?(allowed_host)
     			fact_name = blocker.fact
-    			fact_value = @facter.lookup(fact_name)
+    			fact_value = @facter.lookup(allowed_host, fact_name)
     			raise "cannot release #{host_name}" unless fact_value == blocker.expected_value
     		end
 

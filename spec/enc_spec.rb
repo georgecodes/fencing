@@ -43,7 +43,7 @@ RSpec.describe 'configured ENC' do
 	it "does not block the node that is the global blocker" do
 
 		host_name = 'node1.os.uk'
-	 	allow(@facter).to receive(:lookup).with('node1_ready') { 'false' }
+	 	allow(@facter).to receive(:lookup).with('node1', 'node1_ready') { 'false' }
 
 	 	expect(@enc.resolve_node(host_name)).to eq('node1')
 
@@ -52,7 +52,7 @@ RSpec.describe 'configured ENC' do
 	it "returns the node name for a simple node" do
 
 		host_name = 'node2.os.uk'
-		allow(@facter).to receive(:lookup).with('node1_ready') { 'true' }
+		allow(@facter).to receive(:lookup).with('node1', 'node1_ready') { 'true' }
 
 		expect(@enc.resolve_node(host_name)).to eq('node2')
 
@@ -61,7 +61,7 @@ RSpec.describe 'configured ENC' do
 	it "raises an error if the node is blocked by the global blocker" do
 
 	 	host_name = 'node2.os.uk'
-	 	allow(@facter).to receive(:lookup).with('node1_ready') { 'false' }
+	 	allow(@facter).to receive(:lookup).with('node1', 'node1_ready') { 'false' }
 
 	 	expect { @enc.resolve_node(host_name)}.to raise_error(RuntimeError)
 
@@ -70,7 +70,7 @@ RSpec.describe 'configured ENC' do
 	it "returns the node name for a configured node" do
 
 		host_name = 'node3.os.uk'
-	 	allow(@facter).to receive(:lookup).with('node1_ready') { 'true' }
+	 	allow(@facter).to receive(:lookup).with('node1', 'node1_ready') { 'true' }
 
 	 	expect(@enc.resolve_node(host_name)).to eq('node3')
 
@@ -79,8 +79,8 @@ RSpec.describe 'configured ENC' do
 	 it "ignores the global blocker if a node has its own blocker" do 
 	
 		host_name = 'node4.os.uk'
-		allow(@facter).to receive(:lookup).with('node1_ready') { 'false' }
-	 	allow(@facter).to receive(:lookup).with('node3_ready') { 'true' }
+		allow(@facter).to receive(:lookup).with('node1', 'node1_ready') { 'false' }
+	 	allow(@facter).to receive(:lookup).with('node3', 'node3_ready') { 'true' }
 
 	 	expect(@enc.resolve_node(host_name)).to eq('node4')
 
@@ -89,8 +89,8 @@ RSpec.describe 'configured ENC' do
 	 it "will not release if the nodes blocker does not allow it" do
 			
 		host_name = 'node4.os.uk'
-		allow(@facter).to receive(:lookup).with('node1_ready') { 'false' }
-	 	allow(@facter).to receive(:lookup).with('node3_ready') { 'false' }
+		allow(@facter).to receive(:lookup).with('node1', 'node1_ready') { 'false' }
+	 	allow(@facter).to receive(:lookup).with('node3', 'node3_ready') { 'false' }
 
 	 	expect {@enc.resolve_node(host_name)}.to raise_error(RuntimeError)
 

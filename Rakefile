@@ -27,6 +27,7 @@ spec = Gem::Specification.new do |gem|
 	gem.add_development_dependency "rake"
 	gem.add_development_dependency "rspec"
 	gem.add_development_dependency "rspec-mocks"
+	gem.add_development_dependency "puppet"
 	gem.add_runtime_dependency "json", "~> 1.8.0"
 end
 

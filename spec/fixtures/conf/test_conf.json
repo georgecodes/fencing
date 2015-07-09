@@ -1,3 +1,22 @@
 {
-	"hosts": {}
-}
+			"hosts" : {
+				"node1" : "node1",
+				"node2" : "node2",
+				"node3" : {
+					"node_name" : "node3"
+				},
+				"node4" : {
+					"node_name" : "node4",
+					"blocker" : {
+						"blocking_host_name" : "node3",
+						"fact" : "node3_ready",
+						"expected_value" : "true"
+					}
+				}
+			},
+			"blocker" : {
+				"blocking_host_name" : "node1",
+				"fact" : "node1_ready",
+				"expected_value" : "true"
+			}
+		}

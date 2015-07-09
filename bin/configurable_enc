@@ -7,4 +7,4 @@ nodes_location = ARGV[1]
 host_name = ARGV[2]
 
 enc = OS::Puppet::Enc::EncRunner.new(enc_config_location, nodes_location)
-enc.lookup(host_name)
+puts enc.lookup(host_name)

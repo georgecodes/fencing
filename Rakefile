@@ -10,7 +10,7 @@ require 'rake/testtask'
 require 'rspec/core/rake_task'
 
 spec = Gem::Specification.new do |gem|
-	gem.name          = "configurable-enc"
+	gem.name          = "fencing"
 	gem.version       = '0.1.0'
 	gem.authors       = ["George McIntosh"]
 	gem.email         = ["george@elevenware.com"]

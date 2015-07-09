@@ -1,6 +1,6 @@
 module OS
   module Puppet
-    module Enc
+    module Fencing
 
     	class Classifier
 

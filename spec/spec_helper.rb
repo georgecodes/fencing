@@ -1,3 +1,3 @@
-require_relative '../lib/enc/classifier'
-require_relative '../lib/enc/config'
-require_relative '../lib/enc/facter_adapter'
+require_relative '../lib/fencing/classifier'
+require_relative '../lib/fencing/config'
+require_relative '../lib/fencing/facter_adapter'

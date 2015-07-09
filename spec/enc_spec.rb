@@ -26,9 +26,9 @@ RSpec.describe 'configured ENC' do
 				'expected_value' => 'true'
 			}
 		}
-		config = OS::Puppet::Enc::Config.new(config_hash)
+		config = OS::Puppet::Fencing::Config.new(config_hash)
 		@facter = double('facter')
-		@enc = OS::Puppet::Enc::Classifier.new(config, @facter)
+		@enc = OS::Puppet::Fencing::Classifier.new(config, @facter)
 	end
 
 	it "raises an error if the node isn't found" do
@@ -103,9 +103,9 @@ RSpec.describe 'configured ENC' do
 			}
 		}
 
-		config = OS::Puppet::Enc::Config.new(config_hash)
+		config = OS::Puppet::Fencing::Config.new(config_hash)
 		facter = double('facter')
-		enc = OS::Puppet::Enc::Classifier.new(config, @facter)
+		enc = OS::Puppet::Fencing::Classifier.new(config, @facter)
 
    	host_name = 'node1.os.uk'
 		

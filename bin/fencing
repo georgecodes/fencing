@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'enc'
+require 'fencing'
 
 enc_config_location = ARGV[0]
 nodes_location = ARGV[1]
 host_name = ARGV[2]
 
-enc = OS::Puppet::Enc::EncRunner.new(enc_config_location, nodes_location)
+enc = OS::Puppet::Fencing::FencingRunner.new(enc_config_location, nodes_location)
 puts enc.lookup(host_name)

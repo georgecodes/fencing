@@ -2,7 +2,7 @@ require 'yaml'
 
 module OS
 	module Puppet
-		module Enc
+		module Fencing
 
 			class NodeResolver
 

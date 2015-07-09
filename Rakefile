@@ -16,7 +16,7 @@ spec = Gem::Specification.new do |gem|
 	gem.email         = ["george@elevenware.com"]
 	gem.summary       = %q{A Puppet ENC that releases config based on configuration}
 	gem.description   = %q{Releases Puppet configuration for a node dependent on the condition of dependent nodes}
-	gem.homepage      = "https://os.uk"
+	gem.homepage      = "https://github.com/georgecodes/fencing"
 	gem.license       = "Apache License (2.0)"
 
 	gem.files         = Dir['{bin,lib,man,test,spec}/**/*', 'Rakefile', 'README*', 'LICENSE*']

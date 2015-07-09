@@ -8,9 +8,11 @@ module OS
 
     		def initialize(config_hash)
     			@config = config_hash
-                @global_blocker = Blocker.new(config_hash[:blocker])
+                global_blocker_config = config_hash['blocker']
+                @global_blocker = Blocker.new(global_blocker_config) if global_blocker_config
                 @nodes = []
-                config_hash[:hosts].each do | host_prefix, conf|
+                
+                config_hash['hosts'].each do | host_prefix, conf|
                     node_name = conf
                     blocker = @global_blocker
                     if(conf.class == Hash)

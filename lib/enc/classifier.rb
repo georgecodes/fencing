@@ -16,6 +16,7 @@ module OS
     		end
 
     		def assert_blocked(host_name, blocker)
+                return if !blocker
     			allowed_host = blocker.blocking_host_name
     			return if host_name.start_with?(allowed_host)
     			fact_name = blocker.fact

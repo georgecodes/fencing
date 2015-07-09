@@ -5,7 +5,7 @@ RSpec.describe 'configured ENC' do
 
 	before(:each) do
 		config_hash = {
-			:hosts => {
+			'hosts' => {
 				'node1' => 'node1',
 				'node2' => 'node2',
 				'node3' => {
@@ -20,7 +20,7 @@ RSpec.describe 'configured ENC' do
 					}
 				}
 			},
-			:blocker => {
+			'blocker' => {
 				'blocking_host_name' => 'node1',
 				'fact' => 'node1_ready',
 				'expected_value' => 'true'
@@ -95,8 +95,24 @@ RSpec.describe 'configured ENC' do
 
 	 end
 
+   it "will still run if no global blocker exists" do
 
+   	config_hash = {
+			'hosts' => {
+				'node1' => 'node1'
+			}
+		}
 
+		config = OS::Puppet::Enc::Config.new(config_hash)
+		facter = double('facter')
+		enc = OS::Puppet::Enc::Classifier.new(config, @facter)
+
+   	host_name = 'node1.os.uk'
+		
+		expect(enc.resolve_node(host_name)).to eq('node1')
+
+   end
+ 
 
 
 

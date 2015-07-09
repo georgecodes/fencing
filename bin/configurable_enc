@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'encrunner'
-require 'enc/enc'
-require 'enc/config'
-require 'enc/facter_adapter'
+require 'enc'
+
+enc_config_location = ARGV[0]
+nodes_location = ARGV[1]
+host_name = ARGV[2]
+
+enc = OS::Puppet::Enc::EncRunner.new(enc_config_location, nodes_location)
+enc.lookup(host_name)

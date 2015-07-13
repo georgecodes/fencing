@@ -11,7 +11,7 @@ require 'rspec/core/rake_task'
 
 spec = Gem::Specification.new do |gem|
 	gem.name          = "fencing"
-	gem.version       = '0.1.0'
+	gem.version       = '0.1.1'
 	gem.authors       = ["George McIntosh"]
 	gem.email         = ["george@elevenware.com"]
 	gem.summary       = %q{A Puppet ENC that releases config based on configuration}
